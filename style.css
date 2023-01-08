@@ -1,0 +1,133 @@
+:root {
+    /* Font */
+    --ff-primary: 'Open Sans', sans-serif;
+    --fs-primary: 1rem;
+    --fs-secondary: 1.5rem;
+
+    /* Colours */
+    --clr-background: hsl(200, 88%, 80%);
+    --clr-primary: hsl(0, 0%, 96%);
+    --clr-secondary-400: hsl(198, 100%, 33%);
+    --clr-secondary-600: hsl(198, 100%, 15%);
+    --clr-accent-1: hsl(200, 88%, 59%);
+    --clr-accent-2: hsl(54, 88%, 59%);
+}
+
+@media (min-width: 340px) {
+    :root {
+        --fs-primary: 2rem;
+        --fs-secondary: 2.5rem;
+    }       
+}
+
+@media (min-width: 480px) {
+    :root {
+        --fs-primary: 3rem;
+        --fs-secondary: 3.5rem;
+    }       
+}
+  
+/* Box sizing rules */
+*,
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'], ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+html, body {
+    height: 100%;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img, picture, svg, video, canvas {
+    max-width: 100%;
+    display: block;
+}
+
+/* Allows for word wrapping if the screen gets very small */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    }
+
+/* General Styling */
+
+body {
+    display: grid;
+    place-content: center;
+    font-family: var(--ff-primary);
+    background-color: var(--clr-background);
+}
+
+main {
+    box-shadow: 3px 3px 8px var(--clr-secondary-600);
+    border-radius: 5px;
+    background-color: var(--clr-secondary-600);
+    overflow: hidden;
+}
+
+.even-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+.display {
+    display: flex;
+    padding: 0.5rem;
+    background-color: var(--clr-secondary-400);
+    justify-content: right;
+    align-items: center;
+    font-size: var(--fs-secondary);
+}
+
+button {
+    border: 1.4px solid var(--clr-secondary-600);
+    margin: -1 -1px;
+    padding: 1rem;
+    background-color: var(--clr-primary);
+    border-radius: 3px;
+    font-size: var(--fs-primary);
+}
+
+button:hover,
+button:focus-visible {
+    opacity: 90%;
+}
+.special {
+    background-color: var(--clr-accent-1);
+}
+
+.operator {
+    background-color: var(--clr-accent-2);
+}
