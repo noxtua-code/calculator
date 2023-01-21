@@ -124,6 +124,10 @@ button:hover,
 button:focus-visible {
     opacity: 90%;
 }
+
+button:active {
+    opacity: 70%;
+}
 .special {
     background-color: var(--clr-accent-1);
 }
