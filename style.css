@@ -2,7 +2,10 @@
     /* Font */
     --ff-primary: 'Open Sans', sans-serif;
     --fs-primary: 1rem;
-    --fs-secondary: 1.5rem;
+    --fs-secondary: 1rem;
+
+    /* Image */
+    --img-size: 2rem;
 
     /* Colours */
     --clr-background: hsl(200, 88%, 80%);
@@ -16,14 +19,16 @@
 @media (min-width: 340px) {
     :root {
         --fs-primary: 2rem;
-        --fs-secondary: 2.5rem;
+        --fs-secondary: 1.5rem;
+        --img-size: 3rem;
     }       
 }
 
 @media (min-width: 480px) {
     :root {
         --fs-primary: 3rem;
-        --fs-secondary: 3.5rem;
+        --fs-secondary: 2.5rem;
+        --img-size: 4rem;
     }       
 }
   
@@ -40,16 +45,6 @@
     font: inherit;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'], ol[role='list'] {
-    list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-    scroll-behavior: smooth;
-}
-
 /* Set core body defaults */
 html, body {
     height: 100%;
@@ -60,21 +55,11 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-
 /* Make images easier to work with */
 img, picture, svg, video, canvas {
     max-width: 100%;
     display: block;
 }
-
-/* Allows for word wrapping if the screen gets very small */
-p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-    }
 
 /* General Styling */
 
@@ -104,7 +89,8 @@ main {
 
 .display {
     display: flex;
-    padding: 0.5rem;
+    padding-inline: 0.5rem;
+    padding-block: 1rem;
     background-color: var(--clr-secondary-400);
     justify-content: right;
     align-items: center;
@@ -134,4 +120,11 @@ button:active {
 
 .operator {
     background-color: var(--clr-accent-2);
+}
+
+img {
+    height: var(--img-size);
+    width: var(--img-size);
+    display: block;
+    margin: auto;
 }
